@@ -1,0 +1,25 @@
+version: v1.0
+
+workflows:
+  workflow1:
+    type: cwl
+    config:
+      file: cwl/workflow.cwl
+      settings: cwl/settings.yml
+    bindings:
+      - step: /say_hello
+        target:
+          deployment: ubuntu-24.04
+      - step: /train
+        target:
+          deployment: python-3.12
+
+deployments:
+  python-3.12:
+    type: docker
+    config:
+      image: python:3.12
+  ubuntu-24.04:
+    type: docker
+    config:
+      image: ubuntu:24.04

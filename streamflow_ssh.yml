@@ -1,0 +1,22 @@
+version: v1.0
+
+workflows:
+  workflow1:
+    type: cwl
+    config:
+      file: cwl/task_say_hello.cwl
+      settings: cwl/settings.yml
+    bindings:
+      - step: /
+        target:
+          deployment: ssh-work
+          service: env
+
+deployments:
+  ssh-work:
+    type: ssh
+    config:
+      services:
+        env: environments/work.sh
+      nodes:
+       - work

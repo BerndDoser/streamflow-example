@@ -1,16 +1,18 @@
 version: v1.0
+
 workflows:
-  hello_world:
+  workflow1:
     type: cwl
     config:
-      file: cwl/example.cwl
+      file: cwl/task_say_hello.cwl
+      settings: cwl/settings.yml
     bindings:
-      - step: /print_message
+      - step: /
         target:
-          deployments: container
+          deployment: ubuntu
 
 deployments:
-  container:
+  ubuntu:
     type: docker
     config:
       image: ubuntu:latest

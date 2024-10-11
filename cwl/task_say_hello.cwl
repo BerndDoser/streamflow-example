@@ -2,6 +2,7 @@ cwlVersion: v1.2
 
 class: CommandLineTool
 baseCommand: echo
+stdout: output.txt
 
 inputs:
   message:
@@ -9,4 +10,7 @@ inputs:
     default: "Hello World"
     inputBinding:
       position: 1
-outputs: []
+
+outputs:
+  result:
+    type: stdout

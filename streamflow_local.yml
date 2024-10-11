@@ -1,0 +1,17 @@
+version: v1.0
+
+workflows:
+  workflow1:
+    type: cwl
+    config:
+      file: cwl/task_say_hello.cwl
+      settings: cwl/settings.yml
+    bindings:
+      - step: /
+        target:
+          deployment: local
+
+deployments:
+  local:
+    type: local
+    config: {}

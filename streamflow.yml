@@ -4,15 +4,15 @@ workflows:
   workflow1:
     type: cwl
     config:
-      file: cwl/task_say_hello.cwl
+      file: cwl/workflow.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /
         target:
-          deployment: ubuntu
+          deployment: python3.12
 
 deployments:
-  ubuntu:
+  python3.12:
     type: docker
     config:
-      image: ubuntu:latest
+      image: python:3.12

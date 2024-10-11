@@ -1,1 +1,7 @@
 message: "Hi there!"
+dataset:
+  type: Directory
+  path: data/mnist
+train_script:
+  type: File
+  path: scripts/train.py

@@ -1,3 +1,5 @@
+pandas==2.2.*
+plotly==5.24.*
 streamflow==0.2.0.dev11
 torch==2.4.*
 torchvision==0.19.*

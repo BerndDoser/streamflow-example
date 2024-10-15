@@ -18,10 +18,10 @@ steps:
     run: task_say_hello.cwl
     in:
       message: message
-    out: [result]
+    out: []
   train:
     run: task_train.cwl
     in:
       max_iter: max_iter
       train_script: train_script
-    out: [result]
+    out: []

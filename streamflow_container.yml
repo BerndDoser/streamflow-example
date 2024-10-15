@@ -9,10 +9,10 @@ workflows:
     bindings:
       - step: /
         target:
-          deployment: python3.12
+          deployment: scikit-learn
 
 deployments:
-  python3.12:
+  scikit-learn:
     type: docker
     config:
       image: scikit-learn

@@ -2,7 +2,6 @@ cwlVersion: v1.2
 
 class: CommandLineTool
 baseCommand: echo
-stdout: output.txt
 
 inputs:
   message:
@@ -11,6 +10,4 @@ inputs:
     inputBinding:
       position: 1
 
-outputs:
-  result:
-    type: stdout
+outputs: {}

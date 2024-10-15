@@ -12,13 +12,13 @@ workflows:
           deployment: ubuntu-24.04
       - step: /train
         target:
-          deployment: python-3.12
+          deployment: scikit-learn
 
 deployments:
-  python-3.12:
+  scikit-learn:
     type: docker
     config:
-      image: python:3.12
+      image: scikit-learn
   ubuntu-24.04:
     type: docker
     config:

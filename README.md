@@ -13,5 +13,5 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-streamflow run streamflow.yml
+streamflow run streamflow_< TYPE >.yml
 ```

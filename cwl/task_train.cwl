@@ -9,11 +9,13 @@ inputs:
     doc: The script containing the training logic
     inputBinding:
       position: 1
-  dataset:
-    type: Directory
-    doc: The directory storing the input dataset
+  max_iter:
+    type: int
+    doc: Maximum number of iterations
     inputBinding:
       position: 2
-      prefix: --dataset
+      prefix: --max_iter
 
-outputs: []
+outputs:
+  result:
+    type: stdout

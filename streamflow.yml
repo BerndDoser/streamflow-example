@@ -15,4 +15,4 @@ deployments:
   python3.12:
     type: docker
     config:
-      image: python:3.12
+      image: scikit-learn

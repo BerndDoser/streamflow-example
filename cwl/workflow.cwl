@@ -8,8 +8,8 @@ inputs:
     type: string
   train_script:
     type: File
-  dataset:
-    type: Directory
+  max_iter:
+    type: int
 
 outputs: {}
 
@@ -18,10 +18,10 @@ steps:
     run: task_say_hello.cwl
     in:
       message: message
-    out: []
+    out: [result]
   train:
     run: task_train.cwl
     in:
-      dataset: dataset
+      max_iter: max_iter
       train_script: train_script
-    out: []
+    out: [result]

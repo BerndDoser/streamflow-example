@@ -9,14 +9,11 @@ workflows:
     bindings:
       - step: /
         target:
-          deployment: ssh-work
-          service: env
+          deployment: ssh
 
 deployments:
-  ssh-work:
+  ssh:
     type: ssh
     config:
-      services:
-        env: environments/work.sh
-      nodes:
-       - work
+      hostname: rh04715.h-its.org
+      username: doserbd

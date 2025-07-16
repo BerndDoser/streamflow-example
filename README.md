@@ -5,13 +5,11 @@ This repository contains examples of [StreamFlow](https://streamflow.di.unito.it
 ## Prepare Python environment
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Usage
 
 ```bash
-streamflow run streamflow_< TYPE >.yml
+uv run streamflow run streamflow_< TYPE >.yml
 ```

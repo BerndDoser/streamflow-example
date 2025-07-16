@@ -1,0 +1,27 @@
+[project]
+name = "streamflow-example"
+version = "0.1.0"
+description = "Example project for Streamflow"
+authors = [
+    {name = "Bernd Doser",email = "bernd.doser@h-its.org"}
+]
+license = "Apache-2.0"
+readme = "README.md"
+
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "pandas==2.3.1",
+    "plotly==6.2.0",
+    "scikit-learn==1.7.0",
+    "streamflow==0.2.0.dev11",
+]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
+
+[tool.uv]
+cache-dir = "./.uv_cache"

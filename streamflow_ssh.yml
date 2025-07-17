@@ -4,7 +4,7 @@ workflows:
   workflow1:
     type: cwl
     config:
-      file: cwl/task_say_hello.cwl
+      file: cwl/task_hostname.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /
@@ -15,5 +15,6 @@ deployments:
   ssh:
     type: ssh
     config:
-      hostname: rh04715.h-its.org
+      nodes:
+        - rh04715.h-its.org
       username: doserbd

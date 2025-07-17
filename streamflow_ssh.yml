@@ -16,5 +16,6 @@ deployments:
     type: ssh
     config:
       nodes:
-        - rh04715.h-its.org
+        - genoa-login.h-its.org
       username: doserbd
+      checkHostKey: false

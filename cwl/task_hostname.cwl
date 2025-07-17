@@ -5,4 +5,6 @@ baseCommand: hostname
 
 inputs: {}
 
-outputs: {}
+outputs:
+  example-out:
+    type: stdout

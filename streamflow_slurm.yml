@@ -1,30 +1,35 @@
 version: v1.0
 
 workflows:
-  workflow1:
+  example-workflow:
     type: cwl
     config:
-      file: cwl/task_say_hello.cwl
+      file: cwl/task_hostname.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /
         target:
           deployment: slurm
-          service: cascade
+          service: milan-deep
 
 deployments:
-  ssh-cascade:
+  ssh-genoa:
     type: ssh
     config:
       nodes:
-       - cascade-login.h-its.org
+        - genoa-login.h-its.org
+      username: doserbd
+      checkHostKey: false
   slurm:
     type: slurm
     config:
       maxConcurrentJobs: 10
       services:
-        cascade:
-          partition: cascade.p
-          nodes: 1
+        milan-deep:
+          file: environments/work.sh
+          partition: milan-deep.p
+          time: 00:10:00
           mem: 1gb
-    wraps: ssh-cascade
+          mailUser: bernd.doser@h-its.org
+          mailType: ALL
+    wraps: ssh-genoa

@@ -10,4 +10,6 @@ inputs:
     inputBinding:
       position: 1
 
-outputs: {}
+outputs:
+  example-out:
+    type: stdout

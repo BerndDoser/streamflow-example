@@ -16,4 +16,6 @@ inputs:
       position: 2
       prefix: --max_iter
 
-outputs: {}
+outputs:
+  stdout:
+    type: stdout

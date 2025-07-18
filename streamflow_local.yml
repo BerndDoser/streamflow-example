@@ -4,7 +4,7 @@ workflows:
   workflow1:
     type: cwl
     config:
-      file: cwl/workflow.cwl
+      file: cwl/task_train.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /

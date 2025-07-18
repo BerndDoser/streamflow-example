@@ -4,7 +4,7 @@ workflows:
   example-workflow:
     type: cwl
     config:
-      file: cwl/task_hostname.cwl
+      file: cwl/task_train.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /
@@ -27,7 +27,7 @@ deployments:
       maxConcurrentJobs: 10
       services:
         milan-deep:
-          file: environments/work.sh
+          file: environments/sklearn.sh
           partition: milan-deep.p
           time: 00:10:00
           mem: 1gb

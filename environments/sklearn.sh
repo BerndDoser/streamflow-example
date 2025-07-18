@@ -1,9 +1,8 @@
 #!/bin/bash
 
 ml Python
-ml
 
 echo "${SLURM_JOB_ID} - Running on $(hostname)"
-#source /home/doserbd/git/streamflow-example/.venv/bin/activate
+source /hits/basement/its/doserbd/streamflow/environments/venv-scikit-learn/bin/activate
 
 {{ streamflow_command }}

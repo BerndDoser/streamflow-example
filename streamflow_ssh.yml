@@ -4,12 +4,13 @@ workflows:
   workflow1:
     type: cwl
     config:
-      file: cwl/task_hostname.cwl
+      file: cwl/task_train.cwl
       settings: cwl/settings.yml
     bindings:
       - step: /
         target:
           deployment: ssh
+          service: sklearn
 
 deployments:
   ssh:
@@ -19,3 +20,5 @@ deployments:
         - genoa-login.h-its.org
       username: doserbd
       checkHostKey: false
+      services:
+        sklearn: environments/sklearn.sh

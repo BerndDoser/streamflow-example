@@ -3,6 +3,6 @@
 ml Python
 
 echo "${SLURM_JOB_ID} - Running on $(hostname)"
-source /hits/basement/its/doserbd/streamflow/environments/venv-scikit-learn/bin/activate
+source /hits/basement/its/doserbd/streamflow/environments/venv-sklearn/bin/activate
 
 {{ streamflow_command }}

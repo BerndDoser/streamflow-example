@@ -21,4 +21,4 @@ deployments:
       username: doserbd
       checkHostKey: false
       services:
-        sklearn: environments/sklearn.sh
+        sklearn: environments/sklearn/launch.sh

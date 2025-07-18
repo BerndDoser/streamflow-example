@@ -27,7 +27,7 @@ deployments:
       maxConcurrentJobs: 10
       services:
         milan-deep:
-          file: environments/sklearn.sh
+          file: environments/sklearn/launch.sh
           partition: milan-deep.p
           time: 00:10:00
           mem: 1gb

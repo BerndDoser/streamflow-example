@@ -28,7 +28,7 @@ deployments:
       services:
         milan-deep:
           file: environments/sklearn/launch.sh
-          partition: milan-deep.p
+          partition: ice-deep.p
           time: 00:10:00
           mem: 1gb
           mailUser: bernd.doser@h-its.org

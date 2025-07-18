@@ -20,10 +20,9 @@ deployments:
         - genoa-login.h-its.org
       username: doserbd
       checkHostKey: false
-      sharedPaths:
-        - /hits/basement/its/doserbd/streamflow
   slurm:
     type: slurm
+    workdir: /hits/basement/its/doserbd/streamflow
     config:
       maxConcurrentJobs: 10
       services:
